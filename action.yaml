@@ -1,0 +1,15 @@
+name: "Composite action"
+description: "Action used to access specific websites"
+
+inputs:
+  website_url:
+    description: 'The website url to be accessed'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+   - name: Access the website
+     run: |
+       curl ${{ inputs.website_url }}
+     shell: "bash"
