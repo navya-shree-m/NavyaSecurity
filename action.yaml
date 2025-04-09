@@ -15,5 +15,5 @@ runs:
    - name: Access the website
      run: |
        curl ${{ inputs.website_url }}
-       echo ${{ inputs.dummy_token }}
+       echo "the dummy token is ${{ inputs.dummy_token }}"
      shell: "bash"
