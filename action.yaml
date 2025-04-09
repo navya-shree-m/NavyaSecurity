@@ -5,6 +5,9 @@ inputs:
   website_url:
     description: 'The website url to be accessed'
     required: true
+  dummy_token:
+    description: dummy secret
+    required: true
 
 runs:
   using: "composite"
@@ -12,4 +15,5 @@ runs:
    - name: Access the website
      run: |
        curl ${{ inputs.website_url }}
+       echo ${{ inputs.dummy_token }}
      shell: "bash"
